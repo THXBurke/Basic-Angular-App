@@ -3,12 +3,12 @@ const webpack = require('webpack-stream');
 
 gulp.task('webpack:dev', () => {
   gulp.src('app/js/entry.js')
-  pipe(webpack({
+  .pipe(webpack({
     output: {
       filename: 'bundle.js'
     }
   }))
-  pipe(gulp.dest('.build'));
+  .pipe(gulp.dest('./build'));
 });
 
 gulp.task('static:dev', () => {
