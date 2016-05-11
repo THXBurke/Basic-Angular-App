@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const webpack = require('webpack-stream');
+const eslint = require('eslint');
 
 gulp.task('webpack:dev', () => {
   gulp.src('app/js/entry.js')
@@ -12,10 +13,18 @@ gulp.task('webpack:dev', () => {
   .pipe(gulp.dest('./build'));
 });
 
+gulp.task('lint: test', () => {
+  return gulp.src('app/js/**/*.eslintrc')
+  .pipe(eslint({
+    'useEslintrc': true
+  }))
+  .pipe(eslint.format());
+});
+
 gulp.task('css:dev', () => {
   gulp.src('app/css/**/*.css')
     .pipe(gulp.dest('./build'));
-}) ;
+});
 
 gulp.task('static:dev', () => {
   gulp.src('app/**/*.html')
@@ -24,3 +33,4 @@ gulp.task('static:dev', () => {
 
 gulp.task('build:dev', ['webpack:dev', 'static:dev', 'css:dev']);
 gulp.task('default', ['build:dev']);
+gulp.task('default', ['eslint']);
