@@ -33,4 +33,3 @@ gulp.task('static:dev', () => {
 
 gulp.task('build:dev', ['webpack:dev', 'static:dev', 'css:dev']);
 gulp.task('default', ['build:dev']);
-gulp.task('default', ['eslint']);
