@@ -1,17 +1,37 @@
 {
-  "name": "webpack_angular_basics",
+  "name": "angular_app",
   "version": "1.0.0",
-  "description": "",
-  "main": "bundle.js",
+  "description": "Two resource CRUD app using angular",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "angular": "^1.5.7",
+    "angular-route": "^1.5.7",
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.1",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-protractor": "^2.4.0",
+    "gulp-sass": "^2.3.2",
+    "jsonwebtoken": "^7.0.1",
+    "mongoose": "^4.5.0",
+    "webpack-stream": "^3.2.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/THXBurke/Basic-Angular-App.git"
+  },
+  "author": "rachel",
   "license": "ISC",
-  "devDependencies": {
-    "css-loader": "^0.23.1",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1"
-  }
+  "bugs": {
+    "url": "https://github.com/THXBurke/Basic-Angular-App/issues"
+  },
+  "homepage": "https://github.com/THXBurke/Basic-Angular-App#readme"
 }
