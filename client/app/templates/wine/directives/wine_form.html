@@ -1,0 +1,8 @@
+<form data-ng-submit = "save(wine)">
+     <input type = "text" placeholder="type" name = "type" data-ng-model= "wine.type">
+     <input type = "text" placeholder = "grape" name = "grape" data-ng-model= "wine.grape">
+     <input type = "text" placeholder = "Grown in" name = "country" data-ng-model= "wine.country">
+     <button type = "submit" id = newWine>{{buttonText}}</button>
+     <ng-transclude></ng-transclude>
+   </form>
+   
