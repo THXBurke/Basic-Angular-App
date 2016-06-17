@@ -1,0 +1,6 @@
+<li>
+<ng-transclude></ng-transclude>
+<span data-ng-if="!wine.editing">Delicious {{wine.type}} from the {{wine.grape}} grown in {{wine.country}}</span>
+<button data-ng-if="!wine.editing" data-ng-click="wine.editing=true">Edit</button>
+<button data-ng-click="remove(wine)">Drink Wine</button>
+</li>

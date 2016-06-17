@@ -1,0 +1,26 @@
+<section data-ng-init="globalAuth.getUsername()">
+
+  <ul id="error">
+    <li data-ng-repeat="error in winectrl.errors">{{error.message}}<button data-ng-click="winectrl.errors.splice(winectrl.errors.indexOf(error), 1)">X</button></li>
+  </ul>
+
+        <wine-form
+        data-button-text="Create Wine!"
+        data-action="create"
+        data-wine="winectrl.newWine">
+        </wine-form>
+
+
+        <ul id = "wineList">
+        <wine-list-item data-ng-repeat = "wine in winectrl.wine" data-wine="wine">
+      <wine-form
+      data-ng-if = "wine.editing"
+        data-button-text="Update Wine!"
+        data-action="update"
+        data-wine="wine">
+        <button data-ng-click="wine.editing=false">Cancel</button>
+    </wine-form>
+  </wine-list-item>
+
+        </ul>
+</section>

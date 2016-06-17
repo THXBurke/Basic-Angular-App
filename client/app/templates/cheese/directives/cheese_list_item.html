@@ -1,0 +1,6 @@
+<li>
+<ng-transclude></ng-transclude>
+<span data-ng-if="!cheese.editing">Please enjoy this {{cheese.type}}, a {{cheese.origin}} cheese from {{cheese.country}}</span>
+<button data-ng-if="!cheese.editing" data-ng-click="cheese.editing=true">Edit</button>
+<button data-ng-click="remove(cheese)">Eat Cheese</button>
+</li>
