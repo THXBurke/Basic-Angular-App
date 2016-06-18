@@ -15,7 +15,7 @@ gulp.task('webpack:dev', () => {
 gulp.task('css:dev', () => {
   gulp.src('app/css/**/*.css')
     .pipe(gulp.dest('./build'));
-}) ;
+});
 
 gulp.task('static:dev', () => {
   gulp.src('app/**/*.html')
